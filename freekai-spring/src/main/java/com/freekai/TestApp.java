@@ -17,9 +17,10 @@ public class TestApp {
 		System.out.println(">>>>>>>>>>>>>>>><<<<<<<<<<<<<<<");
 		A a = (A) aca.getBean("a");
 		a.printB();
-		A a2 = (A) aca.getBean("a");
-		a2.printB();
+		a.aopMethodTest1();
 		/*System.out.println(a.getFree());
 		a.testAopMethod();*/
+
+
 	}
 }

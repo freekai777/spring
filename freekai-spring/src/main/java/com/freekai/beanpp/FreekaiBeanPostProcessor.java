@@ -15,7 +15,7 @@ public class FreekaiBeanPostProcessor implements BeanPostProcessor, Ordered {
 	/**
 	 * 在BeanPostProcessor中注入的bean，会和BeanPostProcessor的实现类当做特殊的bean一起先加载和实例化，
 	 * aop代理也是通过#AnnotationAwareAspectJAutoProxyCreator(本质上是BeanPostProcessor的实现类，即bean后置处理器)，
-	 * 由于 @Autowired的 其他bean会先于别的bean执行， 故不会给注入的bean进行aop代理。
+	 * 由于 BeanPostProcessor和其中注入的bean会先于别的bean执行， 故不会给注入的bean进行aop代理。
 	 * 实操后发现确实如此，注入的bean中的方法不会被aop拦截到，控制台也有输出
 	 * [信息: Bean 'b' of type [com.freekai.ab.B] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]
 	 *

@@ -63,6 +63,11 @@ public class A implements BeanNameAware, InitializingBean {
 	public void printB(){
 		System.out.println(this.b);
 		b.testAop();
+		aopMethodTest1();
+	}
+
+	public void aopMethodTest1(){
+		System.out.println("aopMethodTest1---in class A");
 	}
 
 	@Override
