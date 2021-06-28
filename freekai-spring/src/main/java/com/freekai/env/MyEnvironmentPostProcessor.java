@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyEnvironmentPostProcessor implements EnvironmentAware {
+
 	@Override
 	public void setEnvironment(Environment environment) {
 		System.out.println("Env:"+environment);
